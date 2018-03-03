@@ -7,14 +7,18 @@ spring:
       server:
         git:
           uri: https://github.com/dilwit/spring-config-repo.git
+          username: dilwit
+          password: bad13f9efa22a45035eba113719600143b0e7694
+          # Pulls git repo by force if local copy gets dirty
+          force-pull: true
           search-paths:
-            - '{application}'
+            - '{application}/{profile}'
             
 
 # Enbale HTTP Basic authentication for all end-points via spring-boot-security
 security:
-  basic: 
+  basic:
     enabled: true
-  user: 
+  user:
     name: xyz
     password: 123456
