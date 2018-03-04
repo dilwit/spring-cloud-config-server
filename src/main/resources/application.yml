@@ -12,7 +12,8 @@ spring:
           # Pulls git repo by force if local copy gets dirty
           force-pull: true
           search-paths:
-            - '{application}/{profile}'
+            - '{application}/production'
+            - '{application}/staging'
             
 
 # Enbale HTTP Basic authentication for all end-points via spring-boot-security
